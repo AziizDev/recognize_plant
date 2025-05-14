@@ -22,8 +22,8 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 dinov2 = dinov2.to(device)
 
 
-clf = joblib.load("models/plant_identifier_SVM_model.pkl")
-le = joblib.load("models/plant_label_encoder.pkl")
+clf = joblib.load("plant_identifier_SVM_model.pkl")
+le = joblib.load("plant_label_encoder.pkl")
 
 transform = transforms.Compose([
     transforms.Resize((224, 224)),
